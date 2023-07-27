@@ -1,0 +1,27 @@
+try
+"source $HOME/.vim_runtime/default.vim
+catch
+endtry
+
+set number
+set showcmd
+
+set noundofile
+set nobackup
+set noswapfile
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+
+set autoindent
+set breakindent
+set copyindent
+
+set foldenable
+set foldmethod=indent
+
+syntax on
+filetype plugin on
