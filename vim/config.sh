@@ -9,19 +9,23 @@
 
 dir=$(cd `dirname $0`; pwd)
 
+# printf "%s\n" $dir
+
 target_vimrc_path=$HOME/.vimrc
 
 source_vimrc_path=$dir/vimrc
 
 if [ -e $source_vimrc_path ];then
-# printf "source config file checked %s\n" $source_vimrc_path
-printf "config start ...\n"
+  # printf "source config file checked %s\n" $source_vimrc_path
+  printf "config start ...\n"
 else
-printf "%s\n" "source config file not found"
-exit 1
+  printf "%s\n" "source config file not found"
+  exit 1
 fi
 
 cat $source_vimrc_path > $target_vimrc_path
+
+rm -rf $HOME/.vim_runtime
 
 cp -r $dir/vim_runtime $HOME/.vim_runtime
 
