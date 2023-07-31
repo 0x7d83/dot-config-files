@@ -6,7 +6,7 @@
 #      user exrc file: "$HOME/.exrc"
 #       defaults file: "$VIMRUNTIME/defaults.vim"
 #  fall-back for $VIM: "/usr/local/share/vim"
-
+set e
 dir=$(cd `dirname $0`; pwd)
 
 # printf "%s\n" $dir
@@ -26,10 +26,7 @@ fi
 cat $source_vimrc_path > $target_vimrc_path
 
 rm -rf $HOME/.vim
-
 cp -r $dir/dotvim $HOME/.vim
-
 chmod -R 666 $HOME/.vim
 
 printf "config completed.\n"
-
