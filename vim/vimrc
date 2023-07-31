@@ -3,7 +3,5 @@ try
 catch
 endtry
 
-try
-source $HOME/.vim_runtime/options.vim
-catch
-endtry
+source $HOME/.vim/options.vim
+source $HOME/.vim/vim_plug_config.vim

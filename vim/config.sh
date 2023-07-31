@@ -25,9 +25,11 @@ fi
 
 cat $source_vimrc_path > $target_vimrc_path
 
-rm -rf $HOME/.vim_runtime
+rm -rf $HOME/.vim
 
-cp -r $dir/vim_runtime $HOME/.vim_runtime
+cp -r $dir/dotvim $HOME/.vim
+
+chmod -R 666 $HOME/.vim
 
 printf "config completed.\n"
 
