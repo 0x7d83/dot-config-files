@@ -3,5 +3,6 @@ try
 catch
 endtry
 
+source $HOME/.vim/global.vim
 source $HOME/.vim/options.vim
-source $HOME/.vim/vim_plug_config.vim
+source $HOME/.vim/plugin.vim
