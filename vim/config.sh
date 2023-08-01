@@ -26,11 +26,15 @@ fi
 
 cat $source_vimrc_path > $target_vimrc_path
 
-cp -r $HOME/.vim/plugged  ./dotvim
+if [ -e $HOME/.vim/plugged ];then
+  cp -r $HOME/.vim/plugged  ./dotvim
+fi
 
 rm -rf $HOME/.vim
 
 cp -r $dir/dotvim $HOME/.vim
-chmod -R 666 $HOME/.vim
+
+chmod g+wr $HOME/.vimrc
+chmod -R g+rwx $HOME/.vim
 
 printf "config completed.\n"
