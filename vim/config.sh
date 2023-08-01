@@ -6,7 +6,7 @@
 #      user exrc file: "$HOME/.exrc"
 #       defaults file: "$VIMRUNTIME/defaults.vim"
 #  fall-back for $VIM: "/usr/local/share/vim"
-set e
+set +e
 
 dir=$(cd `dirname $0`; pwd)
 
@@ -34,7 +34,9 @@ rm -rf $HOME/.vim
 
 cp -r $dir/dotvim $HOME/.vim
 
-chmod g+wr $HOME/.vimrc
-chmod -R g+rwx $HOME/.vim
+chmod gu+rwx $HOME/.vimrc
+chmod -R gu+rwx $HOME/.vim
+
+git config --global --add safe.directory /Users/shp/.vim/plugged/vim-lsp 
 
 printf "config completed.\n"
